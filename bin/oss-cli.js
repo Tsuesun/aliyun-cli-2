@@ -95,17 +95,22 @@ let ossobj = oss.newOSS(id, key, endpoint, islocal);
 let cdnobj = cdn.newCDN(id, key);
 
 let arr = [];
+function readFileList(path) {
+    var files = fs.readdirSync(path);
+    files.forEach(function (itm, index) {
+        var stat = fs.statSync(path + "/" + itm);
+        if (stat.isDirectory()) {
+            readFileList(path + "/" + itm )
+        } else {
+            arr.push(path + "/" + itm);
+            console.log('parse file ' + path + "/" + itm);
+        }
+    })
+}
+
 for (let j = 0; j < basearr.length; ++j) {
     if (basecmd.isDir(basearr[j])) {
-        let lstfile = globSync(basearr[j] + '/**/*');
-        for (var i = 0; i < lstfile.length; ++i) {
-            let srcfile = lstfile[i];
-            if (fs.existsSync(srcfile)) {
-                arr.push(srcfile);
-
-                console.log('parse file ' + srcfile);
-            }
-        }
+        readFileList(basearr[j]);
     }
     else {
         let lstfile = globSync(basearr[j]);
