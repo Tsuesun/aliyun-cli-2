@@ -1,8 +1,7 @@
 {
-  "name": "aliyun-cli-2",
-  "version": "0.2.8",
-  "latest": "0.2.8",
-  "description": "aliyun-cli-2",
+  "name": "@tradeshift/aliyun-uploader",
+	"version": "0.0.0-semantically-released",
+	"description": "Upload assets to aliyun oss",
   "keywords": [
     "aliyun",
     "cli",
@@ -13,20 +12,6 @@
   "preferGlobal": true,
   "config": {
     "publishtest": false
-  },
-  "homepage": "http://www.heysdk.com/",
-  "author": {
-    "name": "zhs007",
-    "email": "sssxueren@gmail.com",
-    "url": "http://www.heysdk.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/maoanran/aliyun-cli-2"
-  },
-  "bugs": {
-    "url": "https://github.com/maoanran/aliyun-cli-2/issues",
-    "email": "maoanran@gmail.com"
   },
   "directories": {
     "bin": "./bin"
@@ -46,6 +31,7 @@
     "shelljs": "*",
     "yargs": "*"
   },
-  "license": "MIT",
+  "author": "Tradeshift",
+	"license": "MIT",
   "readmeFilename": "README.md"
 }

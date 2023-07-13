@@ -1,1 +1,7 @@
-{"description": null, "maintainers": ["china-engineering"], "checks": ["build", "SonarQube"]}
+{
+    "description": "Upload assets to aliyun oss", 
+    "maintainers": ["china-engineering"], 
+    "checks": [
+        "Sonarqube scanner"
+    ]
+}
