@@ -1,0 +1,15 @@
+# This file contains metadata for backstage
+# Read more about available fields and annotations:
+# https://github.com/tradeshift/backstage
+#
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: aliyun-cli-2
+  description: ""
+  annotations:
+    github.com/project-slug: Tradeshift/aliyun-cli-2
+spec:
+  type: other
+  lifecycle: experimental
+  owner: china-engineering
