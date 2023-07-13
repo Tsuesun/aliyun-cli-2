@@ -1,0 +1,26 @@
+name: Test
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    name: Test
+    runs-on: [self-hosted,ts-large-x64-docker-large]
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          registry-url: 'https://npm.pkg.github.com'
+          cache: 'npm'
+
+      - name: 📥 Download deps
+        run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
