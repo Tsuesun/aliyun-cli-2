@@ -8,7 +8,7 @@ on:
 jobs:
   test:
     name: Test
-    runs-on: [self-hosted,ts-large-x64-docker-large]
+    runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3

@@ -9,7 +9,7 @@ on:
 jobs:
   release:
     name: 🚀 Release
-    runs-on: [self-hosted,ts-large-x64-docker-large]
+    runs-on: ubuntu-latest
     if: ${{ !github.event.fork &&
       contains('refs/heads/master,refs/heads/main', github.ref) && github.event_name == 'push' }}
     steps:

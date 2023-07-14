@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Sonarqube scanner
-    runs-on: [self-hosted,ts-large-x64-docker-large]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: fetching

@@ -3,7 +3,7 @@ on: [pull_request]
 
 jobs:
   semantic-release:
-    runs-on: [self-hosted,ts-large-x64-docker-large]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
